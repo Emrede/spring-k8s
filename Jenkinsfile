@@ -12,22 +12,22 @@ pipeline {
         stage('Build Spring Boot App') {
             steps {
                 // Build Spring Boot application with Gradle
-                sh './gradlew clean build'
+                sh './HelloWorld/gradlew clean build'
             }
         }
 
         stage('Build Docker Image') {
             steps {
                 // Build Docker image
-                sh 'docker build -t helloworld-app .'
+                sh 'docker build -t spring-hello-world .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
                 // Push the Docker image to a registry
-                sh 'docker tag helloworld-app:latest emrede/helloworld-app:latest'
-                sh 'docker push emrede/helloworld-app:latest'
+                sh 'docker tag spring-hello-world:latest emrede/spring-hello-world:latest'
+                sh 'docker push emrede/spring-hello-world:latest'
             }
         }
         
