@@ -12,7 +12,8 @@ pipeline {
         stage('Build Spring Boot App') {
             steps {
                 // Build Spring Boot application with Gradle
-                sh './HelloWorld/gradlew clean build'
+                sh 'cd HelloWorld'
+                sh './gradlew clean build'
             }
         }
 
