@@ -8,7 +8,16 @@ pipeline {
                 checkout scm
             }
         }
-        
+
+        stage('Install Dependencies') {
+            steps {
+                // Install Java or any other dependencies here
+                sh '''
+                  apt-get update
+                  apt-get install -y openjdk-17-jdk
+                '''
+            }
+
         stage('Build Spring Boot App') {
             steps {
                 // Build Spring Boot application with Gradle
