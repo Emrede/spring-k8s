@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: spring-hello-world
+        image: emrede/spring-hello-world:latest
         ports:
         - containerPort: 8080
