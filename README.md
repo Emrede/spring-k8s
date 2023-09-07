@@ -36,5 +36,5 @@ Check Ingress: kubectl describe ingress hello-world-ingress
 - Look for the "Address" field in the Ingress description to find out where your service can be accessed. If everything is set up correctly, you should be able to access your Spring Boot application via the ingress address. In this case it should be `localhost`
 
 - Install ngrok for public access: ` brew install ngrok/ngrok/ngrok`
-- Start a tunnel with `ngrok http 80`
+- It runs on my `localhost:80`. So, we can start a tunnel with `ngrok http 80`
 - I have done this on my local and my app is accessible on: `https://b4e0-82-222-120-241.ngrok-free.app`
